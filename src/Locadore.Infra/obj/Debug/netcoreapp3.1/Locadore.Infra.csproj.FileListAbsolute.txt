@@ -1,0 +1,8 @@
+C:\Users\Ricardo\Desktop\ra\Locadora\src\Locadore.Infra\bin\Debug\netcoreapp3.1\Locadore.Infra.deps.json
+C:\Users\Ricardo\Desktop\ra\Locadora\src\Locadore.Infra\bin\Debug\netcoreapp3.1\Locadore.Infra.dll
+C:\Users\Ricardo\Desktop\ra\Locadora\src\Locadore.Infra\bin\Debug\netcoreapp3.1\Locadore.Infra.pdb
+C:\Users\Ricardo\Desktop\ra\Locadora\src\Locadore.Infra\obj\Debug\netcoreapp3.1\Locadore.Infra.csprojAssemblyReference.cache
+C:\Users\Ricardo\Desktop\ra\Locadora\src\Locadore.Infra\obj\Debug\netcoreapp3.1\Locadore.Infra.AssemblyInfoInputs.cache
+C:\Users\Ricardo\Desktop\ra\Locadora\src\Locadore.Infra\obj\Debug\netcoreapp3.1\Locadore.Infra.AssemblyInfo.cs
+C:\Users\Ricardo\Desktop\ra\Locadora\src\Locadore.Infra\obj\Debug\netcoreapp3.1\Locadore.Infra.dll
+C:\Users\Ricardo\Desktop\ra\Locadora\src\Locadore.Infra\obj\Debug\netcoreapp3.1\Locadore.Infra.pdb
