@@ -1,0 +1,19 @@
+--CRIA  BANCO DE  DADOS -   MIGRATIONS
+
+- add-migration "Initial" -Verbose -Context DataContext
+	Gera uma classe  Initial  que  herda  Migration com  2 metodos
+	-> Up  -- constroi  
+	-> Down  -- destroi
+
+agora  a migration  esta pronta para  ser aplicada - existe  um snapchat  ate  aqui
+
+- update-Database -Verbose -Context DataContext
+	-> atualiza o  banco de dados conforme se encontra as migrations criada  - insere no  banco
+
+ -  rodar migrations para um context   especifico
+	->  Add-Migration Initial -Verbose  -Context DataContext
+  
+
+  -  Gerar um Script  Migration
+  ->Install-Package  Microsoft.EntityFrameworkCore.SqlServer
+  -> Script-Migration -Context DataContext -Context DataContext

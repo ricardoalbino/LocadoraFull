@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ricardo\\Desktop\\ra\\Locadora\\src\\Locadora.App\\Locadora.App.csproj": {}
+    "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.App\\Locadora.App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ricardo\\Desktop\\ra\\Locadora\\src\\Locadora.App\\Locadora.App.csproj": {
+    "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.App\\Locadora.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ricardo\\Desktop\\ra\\Locadora\\src\\Locadora.App\\Locadora.App.csproj",
+        "projectUniqueName": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.App\\Locadora.App.csproj",
         "projectName": "Locadora.App",
-        "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\Locadora\\src\\Locadora.App\\Locadora.App.csproj",
+        "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.App\\Locadora.App.csproj",
         "packagesPath": "C:\\Users\\Ricardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ricardo\\Desktop\\ra\\Locadora\\src\\Locadora.App\\obj\\",
+        "outputPath": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
