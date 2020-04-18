@@ -1,0 +1,116 @@
+﻿
+@model Locadora.Domain.Models.FiltrarFilmes
+
+
+<div class="card">
+    <div class="card-header" style="background-color:mediumseagreen">
+        <div class="float-left">
+            <h6>Filtrar Filmes</h6>
+        </div>
+
+    </div>
+</div>
+&nbsp;
+<form asp-controller="FilmeFiltros" method="get">
+    <div class="form-row">
+
+        <div class="form-group col-md-3">
+            <label>Genêro</label>
+            <select asp-for="Genero" id="genero" class="form-control form-control-sm">
+                <option selected>Escolha um Genêro</option>
+                <option value="Ação">Ação</option>
+                <option value="Animação">Animação</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Comédia">Comédia</option>
+                <option value="Documentário">Documentário</option>
+                <option value="Fantasia">Fantasia</option>
+                <option value="Faroeste">Faroeste </option>
+                <option value="Ficção Científica">Ficção Científica</option>
+                <option value="Guerra">Guerra</option>
+                <option value="Musicais">Musicais</option>
+                <option value="Romance">Romance</option>
+                <option value="Suspense">Suspense</option>
+                <option value="Terror">Terror</option>
+                <option value="Tragédia">Tragédia</option>
+                <option value="Drama">Drama</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-3">
+            <label>Data de Lançamento</label>
+            <div id="datetimepicker1">
+                <input asp-for="DataLançamento" type="datetime-local" class="form-control form-control-sm" id="dataLancamento" />
+
+            </div>
+        </div>
+
+        <div class="form-group col-md-3">
+      
+            &nbsp;
+            <div class='input-group date'>
+                &nbsp;
+                <button class="btn btn-success  btn-sm" type="submit">Filtrar</button>
+            </div>
+        </div>
+
+        @*<div class="form-group col-md-3">
+            <label>Nome</label>
+            <div class='input-group date' id='datetimepicker2'>
+                <input asp-for="Nome" type='text' id="nome" class="form-control form-control-sm" />
+                &nbsp;
+                <button class="btn btn-success  btn-sm" type="submit">Filtrar</button>
+            </div>
+        </div>*@
+
+    </div>
+</form>
+
+
+
+<table class="table table-sm table-bordered table-striped" id="myTable">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Genero
+            </th>
+            <th>
+                DataLançamento
+            </th>
+            <th>
+                Valor da Locacao
+            </th>
+
+        </tr>
+    </thead>
+
+    <tbody class="tbody">
+
+        @foreach (var item in ViewBag.ListarFilmes)
+        {
+            <tr>
+                <td>
+                    @item.Nome
+                </td>
+
+                <td>
+                    @item.Genero
+                </td>
+
+                <td>
+                    @item.DataLançamento
+                </td>
+
+                <td>
+                    @item.ValorLocacao
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+
+

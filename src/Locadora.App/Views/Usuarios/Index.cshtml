@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Locadora.Domain.Models.Usuario>
+
+
+<div class="card">
+    <div class="card-header" style="background-color:mediumseagreen">
+        <div class="float-left">
+            <h6>Usuarios</h6>
+        </div>
+
+        <div class="float-md-right">
+            <a class="btn btn-success btn-sm" asp-action="Create">Novo</a>
+        </div>
+
+        &nbsp; &nbsp;
+        <div class="float-right">
+            <input type="text" class="form-control form-control-sm" id="nome" placeholder="Filtrar por:">
+        </div>
+    </div>
+
+    <!--TABELA  DE DADOS-->
+    <div class="card-body">
+        <table class="table table-sm table-bordered table-striped" id="myTable">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telefone)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.email)
+                    </th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Telefone)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.email)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" class="btn btn-success btn-sm" asp-route-id="@item.Id"><span class="fa fa-pencil-alt"></span></a>
+
+                            <a asp-action="Delete" class="btn btn-success btn-sm" asp-route-id="@item.Id"><span class="fa fa-trash"></span></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<!-- FILTRO -->
+@section Scripts
+{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#nome").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable  tbody tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+
+      </script>
+}

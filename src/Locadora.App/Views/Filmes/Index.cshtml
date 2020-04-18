@@ -1,0 +1,108 @@
+﻿@model IEnumerable<Locadora.Domain.Models.Filme>
+
+
+<div class="card">
+    <div class="card-header" style="background-color:mediumseagreen">
+        <div class="float-left">
+            <h6>Filmes</h6>
+        </div>
+
+        <div class="float-md-right">
+            <a class="btn btn-success btn-sm" asp-action="Create">Novo</a>
+        </div>
+
+        &nbsp;
+        <div class="float-right">
+            <input type="text" class="form-control form-control-sm" id="nome" placeholder="Filtrar por:">
+        </div>
+    </div>
+
+
+   
+
+        &nbsp;
+        <table class="table table-sm table-bordered table-striped" id="myTable">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Genero)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DataLançamento)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ValorLocacao)
+                    </th>
+
+
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody class="tbody">
+
+                @foreach (var item in Model)
+                {
+                    <tr >
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Genero)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DataLançamento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ValorLocacao)
+                        </td>
+
+
+                        <td>
+                            <a asp-action="Edit" class="btn btn-success btn-sm" asp-route-id="@item.Id"><span class="fa fa-pencil-alt"></span></a>
+
+                            <a asp-action="Delete" class="btn btn-success btn-sm" asp-route-id="@item.Id"><span class="fa fa-trash"></span></a>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+
+<!-- FILTRO -->
+@section Scripts
+{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#nome").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable  tbody tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+
+    </script>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Locadora.Domain.Models.Filme>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Filtrar Filmes</title>
+</head>
+<body>
+
+    <table class="table table-sm table-bordered table-striped" id="myTable">
+        <thead>
+            <tr>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Genero
+                </th>
+                <th>
+                    DataLançamento
+                </th>
+                <th>
+                    Valor da Locacao
+                </th>
+
+            </tr>
+        </thead>
+
+        <tbody class="tbody">
+
+            @foreach (var item in  ViewBag.ListarFilmes)
+            {
+                <tr>
+                    <td>
+                        @item.Nome
+                    </td>
+
+                    <td>
+                        @item.Genero
+                    </td>
+
+                    <td>
+                        @item.DataLançamento
+                    </td>
+
+                    <td>
+                        @item.ValorLocacao
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+</body>
+</html>

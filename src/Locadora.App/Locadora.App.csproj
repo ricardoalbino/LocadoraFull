@@ -4,6 +4,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Locadora.Domain\Locadora.Domain.csproj" />
+    <ProjectReference Include="..\Locadore.Infra\Locadore.Infra.csproj" />
+  </ItemGroup>
+
 
 
 </Project>
