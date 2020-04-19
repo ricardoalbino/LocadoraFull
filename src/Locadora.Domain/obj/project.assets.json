@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.Domain\\Locadora.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.Domain\\Locadora.Domain.csproj",
       "projectName": "Locadora.Domain",
-      "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.Domain\\Locadora.Domain.csproj",
+      "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.Domain\\Locadora.Domain.csproj",
       "packagesPath": "C:\\Users\\Ricardo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

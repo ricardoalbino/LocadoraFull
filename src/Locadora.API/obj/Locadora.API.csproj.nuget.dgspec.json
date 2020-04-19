@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.API\\Locadora.API.csproj": {}
+    "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.API\\Locadora.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.API\\Locadora.API.csproj": {
+    "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.API\\Locadora.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.API\\Locadora.API.csproj",
+        "projectUniqueName": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.API\\Locadora.API.csproj",
         "projectName": "Locadora.API",
-        "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.API\\Locadora.API.csproj",
+        "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.API\\Locadora.API.csproj",
         "packagesPath": "C:\\Users\\Ricardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.API\\obj\\",
+        "outputPath": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,11 +30,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.Domain\\Locadora.Domain.csproj": {
-                "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.Domain\\Locadora.Domain.csproj"
+              "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.Domain\\Locadora.Domain.csproj": {
+                "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.Domain\\Locadora.Domain.csproj"
               },
-              "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadore.Infra\\Locadore.Infra.csproj": {
-                "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadore.Infra\\Locadore.Infra.csproj"
+              "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadore.Infra\\Locadore.Infra.csproj": {
+                "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadore.Infra\\Locadore.Infra.csproj"
               }
             }
           }
@@ -48,6 +48,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -87,14 +91,14 @@
         }
       }
     },
-    "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.Domain\\Locadora.Domain.csproj": {
+    "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.Domain\\Locadora.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.Domain\\Locadora.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.Domain\\Locadora.Domain.csproj",
         "projectName": "Locadora.Domain",
-        "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.Domain\\Locadora.Domain.csproj",
+        "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.Domain\\Locadora.Domain.csproj",
         "packagesPath": "C:\\Users\\Ricardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -142,14 +146,14 @@
         }
       }
     },
-    "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadore.Infra\\Locadore.Infra.csproj": {
+    "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadore.Infra\\Locadore.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadore.Infra\\Locadore.Infra.csproj",
+        "projectUniqueName": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadore.Infra\\Locadore.Infra.csproj",
         "projectName": "Locadore.Infra",
-        "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadore.Infra\\Locadore.Infra.csproj",
+        "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadore.Infra\\Locadore.Infra.csproj",
         "packagesPath": "C:\\Users\\Ricardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadore.Infra\\obj\\",
+        "outputPath": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadore.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -168,8 +172,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.Domain\\Locadora.Domain.csproj": {
-                "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\dev\\src\\Locadora.Domain\\Locadora.Domain.csproj"
+              "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.Domain\\Locadora.Domain.csproj": {
+                "projectPath": "C:\\Users\\Ricardo\\Desktop\\ra\\branchs\\src\\Locadora.Domain\\Locadora.Domain.csproj"
               }
             }
           }

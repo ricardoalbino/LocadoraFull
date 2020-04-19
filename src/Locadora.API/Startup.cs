@@ -1,12 +1,16 @@
+using Locadora.API.Shared;
 using Locadora.Domain.Interfaces;
 using Locadora.Infra.Context;
 using Locadora.Infra.Repository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Locadora.API
 {
@@ -38,6 +42,10 @@ namespace Locadora.API
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IFilmeRepository, FilmeRepository>();
 
+
+
+            
+        
             services.AddCors(c =>
             {
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
@@ -47,6 +55,35 @@ namespace Locadora.API
             {
                 c.AddPolicy("AllowOrigin", options => options.WithOrigins("https://localhost:44353"));
             });
+
+
+            //TOKEN  JWT
+            var appSettingsSection = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(appSettingsSection);
+
+            var appSettings = appSettingsSection.Get<AppSettings>();
+            var key = Encoding.ASCII.GetBytes(appSettings.ChaveCriptografia);
+
+            services.AddAuthentication(x => 
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme    = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x => 
+            {
+                x.RequireHttpsMetadata = true;
+                x.SaveToken            = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey    = true,
+                    IssuerSigningKey            = new SymmetricSecurityKey(key),
+                    ValidateIssuer              = true,
+                    ValidateAudience            = true,
+                    ValidAudience               = appSettings.ValidoEm,
+                    ValidIssuer                 = appSettings.Emissor
+
+                };
+            });
+
 
         }
 
