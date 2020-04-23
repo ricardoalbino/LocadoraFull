@@ -24,6 +24,7 @@ namespace Locadora.Domain.Models
         //public virtual IEnumerable<Filme> Filmes { get; set; }
 
         //public Locacao locacao { get; set; }
+        public string Password { get; set; }
 
 
     }

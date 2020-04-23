@@ -13,7 +13,9 @@ namespace Locadora.Infra.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(100)");
 
-
+            builder.Property(u => u.Password)
+               .IsRequired()
+               .HasColumnType("varchar(100)");
 
             /*1 : 1 Usuario TEM N  Locacao*/
             //builder.HasMany(navigationExpression: u => u.Locacao)
@@ -32,7 +34,7 @@ namespace Locadora.Infra.Mappings
             //   /*CHAVE ESTRANGEIRA  DO Usuario NA  TABELA Locacao*/
             //   .HasForeignKey(f => f.UsuarioID);
 
-           
+
             builder.ToTable("Usuario");
         }
     }
