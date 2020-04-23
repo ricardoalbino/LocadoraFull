@@ -1,0 +1,61 @@
+﻿
+ENDPOINTS
+-  Um endpoint de um web service é a URL onde seu serviço pode ser acessado por uma aplicação cliente.
+Uma API é um conjunto de rotinas, protocolos e ferramentas para construir aplicações.
+
+
+CONTROLLERS  ENDPOINTS
+
+GET
+- https://localhost:44378/api/locadora/Usuarios
+
+GET  
+-UsuariosController
+-_usuarioRepository
+-Repository
+-Entity
+
+
+O que é REST e RESTful?
+Ao contrário do que muitos imaginam, REST não é necessariamente um protocolo de comunicação
+
+REST é um estilo de arquitetura, ou seja, uma série de restrições que devem ser seguidas no processo de criação de um web service.
+
+RESTful seria, então, a API que está de acordo com todas as restrições definidas por Roy.
+
+E é aí que a maior parte das APIs RESTful caem por terra, pois dificilmente elas estão em conformidade com todas essas restrições, elas possuem diferentes graus de maturidade, conforme falaremos mais pra frente.
+
+Restrições do RESTful
+Os principais critérios para uma API ser RESTful são:
+
+Uniform Interface
+Stateless
+Cacheable
+Client-Server
+Layered system
+Sem seguir todas estas restrições, sua API não será RESTful, será apenas mais uma implementação RPC em cima do protocolo HTTP.
+
+Dentre todas elas, existe uma restrição que é geralmente menos atendida, a interface uniforme (Uniform interface). Mas, o que significa isso?
+
+Alcançar uma interface uniforme significa atingir quatro critérios:
+
+Resource-based: Em contraposição ao comum RPC, REST tenta lidar com recursos invés de métodos. Caso você esteja criando um post chamando /posts/create?title=lorem você não está seguindo o padrão REST, devido ao tratamento de métodos na url. Nesse cenário, o ideal seria fazer uma chamada POST para a coleção de /posts.
+Manipulation of resources through representations: O cliente acessa os recursos através de uma representação (JSON, XML, etc.), que contenha informação suficiente para manipular este no servidor, desde que tenha permissão pra isso.
+Self-descriptive Messages: As respostas são auto-descritivas, incluindo informação suficiente para que o cliente saiba como utilizá-las. Usando HTTP, por exemplo, é necessário uma propriedade Content-Type incluída no cabeçalho para descrever que tipo de representação é utilizada.
+Hypermedia as the engine of application state (HATEOAS)
+HATEOAS e RESTful
+É aqui que se encontra a parte complicada. A restrição em que poucas APIs conseguem se enquadrar. O significado de “HATEOAS” denota muitas semelhanças com algo que já falamos hoje: a World Wide Web.
+
+Note que, a exploração das web pages na internet é feita no que podemos chamar de “caminhos“, temos um ponto de partida e a partir dele encontramos as demais páginas.
+
+A mesma lógica se aplica as APIs RESTful. Basicamente, sua API deve ser um livro aberto, você não deve precisar de acesso a documentação para saber que para adicionar um usuário a coleção, precisará de uma requisição POST pra URL /users.
+
+Deve ser possível descobrir todas as manipulações de seus recursos através da própria API.
+
+Quais APIs que você conhece que fazem isso? Quais as que você consegue trabalhar sabendo apenas o domínio inicial (ponto de partida) e o protocolo?
+
+Possuir uma documentação listando todos os recursos e ações disponíveis não é o problema, o problema está em quando você não recebe os hyperlinks necessários ao fazer uma requisição pra raiz da API, impedindo minha exploração dos dados e funcionalidades.
+
+Ou seja, isso indica que: sua API provavelmente não é RESTful. E está tudo bem.
+
+Caso tenha ficado alguma dúvida, o vídeo abaixo também explica a diferença de REST x RESTful!

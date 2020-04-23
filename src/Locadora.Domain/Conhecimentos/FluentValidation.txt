@@ -1,0 +1,7 @@
+﻿INSTALAR FluentValidation
+
+Install-Package FluentValidation.AspNetCore
+
+
+-
+

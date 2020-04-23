@@ -1,0 +1,9 @@
+Rodando a APP em SelfHosting
+-	abra  o cmd
+-	navegue  ate  a pasta  onde  vc  esta  desenvolvendo  seu projeto  e  add na frente  o  "comando"
+-	cd  C:\Users\Ricardo\Desktop\ra\branchs\src\Locadora.App> dotnet run --project Locadora.App.csproj
+-   Com  isso ele  ira  auto-hospedar o projeto  na  sua  maquina  
+-   https://localhost:5001
+-  Ctrl + c  = para  a aplicação
+-  para subir  a  app novamente  faça o mesmo  comando.
+-  obs:  nesse modo vc  pode  acompnhar  toda  a atidade no  software  pelo cmd. ele vai mostrando  os  logs

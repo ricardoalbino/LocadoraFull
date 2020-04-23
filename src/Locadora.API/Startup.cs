@@ -1,5 +1,7 @@
 using Locadora.API.Shared;
 using Locadora.Domain.Interfaces;
+using Locadora.Domain.Notificacoes;
+using Locadora.Domain.Services;
 using Locadora.Infra.Context;
 using Locadora.Infra.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -28,24 +30,35 @@ namespace Locadora.API
         {
             services.AddControllers();
 
+            //Conecao  Banco
+            services.AddDbContext<DataContext>(options =>
+            options.UseSqlite(
+                Configuration.GetConnectionString("DefaultConnection")));
+
+            //Injeção  de Dependencia
+            services.AddScoped<DataContext>();
+
+
+            //Repositorios
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<IFilmeRepository, FilmeRepository>();
+
+            //Servicos
+            services.AddScoped<IUsuarioService, UsuarioService>();
+            services.AddScoped<IFilmeService, FilmeService>();
+
+            //Notificadores
+            services.AddScoped<INotificador, Notificador>();
+
+            //Swagger
             //services.AddSwaggerGen(swagger =>
             //{
             //    swagger.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info { Title = "LocadoraAPI" });
             //});
 
 
-            services.AddDbContext<DataContext>(options =>
-            options.UseSqlite(
-                Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddScoped<DataContext>();
-            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-            services.AddScoped<IFilmeRepository, FilmeRepository>();
-
-
-
-            
-        
+            //Cors
             services.AddCors(c =>
             {
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
@@ -83,6 +96,8 @@ namespace Locadora.API
 
                 };
             });
+
+
 
 
         }

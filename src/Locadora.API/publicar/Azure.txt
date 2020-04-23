@@ -1,0 +1,3 @@
+Azure
+-  Criar  uma conta no Azure
+-  Essa  conta é a mesma do visual studio

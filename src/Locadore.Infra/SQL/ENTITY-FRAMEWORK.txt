@@ -1,0 +1,9 @@
+﻿GERADOR  GUID
+https://www.guidgenerator.com/online-guid-generator.aspx
+
+SQL
+INSERT into Usuario(Id,  Nome, email,Telefone)
+values  
+('36300920-6d65-4bc1-8fda-16ebc34c0c16','Ricardo Albino', 'cadu@gmail.com','11973301843')
+
+UPADATE  

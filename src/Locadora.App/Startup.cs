@@ -1,10 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Locadora.Domain.Interfaces;
+using Locadora.Infra.Context;
+using Locadora.Infra.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +23,14 @@ namespace Locadora.App
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<DataContext>(options =>
+            options.UseSqlite(
+              Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<IFilmeRepository, FilmeRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

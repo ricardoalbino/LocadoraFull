@@ -24,7 +24,6 @@
     ".NETCoreApp,Version=v3.1": {
       "Locadora.App/1.0.0": {
         "dependencies": {
-          "Locadora.Domain": "1.0.0",
           "Locadore.Infra": "1.0.0",
           "Newtonsoft.Json": "12.0.3",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -303,6 +302,20 @@
         },
         "compile": {
           "Locadora.App.dll": {}
+        }
+      },
+      "FluentValidation/8.6.2": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.6.2.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
@@ -1430,6 +1443,9 @@
         }
       },
       "Locadora.Domain/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "8.6.2"
+        },
         "runtime": {
           "Locadora.Domain.dll": {}
         },
@@ -3078,6 +3094,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FluentValidation/8.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-N2vz+f6pAX9AI19hu83U2LJjjc/ETzWGlICVanu3DIG76QhzEu3PR/CQSFBX69PRuBTivrW4jhBzeV7dXIfqyw==",
+      "path": "fluentvalidation/8.6.2",
+      "hashPath": "fluentvalidation.8.6.2.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
       "type": "package",

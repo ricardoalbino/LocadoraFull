@@ -32,3 +32,4 @@ C:\Users\Ricardo\Desktop\ra\branchs\src\Locadore.Infra\obj\Debug\netcoreapp3.1\L
 C:\Users\Ricardo\Desktop\ra\branchs\src\Locadore.Infra\obj\Debug\netcoreapp3.1\Locadore.Infra.csproj.CopyComplete
 C:\Users\Ricardo\Desktop\ra\branchs\src\Locadore.Infra\obj\Debug\netcoreapp3.1\Locadore.Infra.dll
 C:\Users\Ricardo\Desktop\ra\branchs\src\Locadore.Infra\obj\Debug\netcoreapp3.1\Locadore.Infra.pdb
+C:\Users\Ricardo\Desktop\ra\branchs\src\Locadore.Infra\obj\Debug\netcoreapp3.1\Locadore.Infra.genruntimeconfig.cache

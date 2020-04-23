@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Locadora.API.Controllers
 {
 
-    //https://localhost:44353/api/locadora/Usuarios
+    //https://localhost:44378/api/locadora/Usuarios
     [ApiController]
     [Route("api/locadora/[controller]")]
     public class UsuariosController : Controller
@@ -29,9 +29,6 @@ namespace Locadora.API.Controllers
         {
 
             var usuario = await _usuarioRepository.ObterTodos();
-
-
-
             return usuario;
         }
 

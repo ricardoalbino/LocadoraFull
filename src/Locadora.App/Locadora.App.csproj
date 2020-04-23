@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Locadora.Domain\Locadora.Domain.csproj" />
     <ProjectReference Include="..\Locadore.Infra\Locadore.Infra.csproj" />
   </ItemGroup>
 

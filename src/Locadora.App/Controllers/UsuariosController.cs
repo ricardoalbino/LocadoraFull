@@ -5,13 +5,13 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Locadora.App.Controllers
 {
+
+    //CONSUMINDO  API EM CORE
     public class UsuariosController : Controller
     {
         private readonly DataContext _context;
@@ -31,7 +31,7 @@ namespace Locadora.App.Controllers
             List<Usuario> usuarioList = new List<Usuario>();
             using (var httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("https://localhost:44353/api/locadora/Usuarios"))
+                using (var response = await httpClient.GetAsync("https://localhost:44378/api/locadora/Usuarios"))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     usuarioList = JsonConvert.DeserializeObject<List<Usuario>>(apiResponse);
@@ -59,7 +59,7 @@ namespace Locadora.App.Controllers
             {
                 StringContent content = new StringContent(JsonConvert.SerializeObject(usuario), Encoding.UTF8, "application/json");
 
-                using (var response = await httpClient.PostAsync("https://localhost:44353/api/locadora/Usuarios", content))
+                using (var response = await httpClient.PostAsync("https://localhost:44378/api/locadora/Usuarios", content))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
 
@@ -74,6 +74,7 @@ namespace Locadora.App.Controllers
         }
 
         // GET: Usuarios/Edit/5
+        [HttpGet("{id:guid}")]
         public async Task<IActionResult> Edit(Guid id)
         {
 
@@ -81,7 +82,7 @@ namespace Locadora.App.Controllers
 
             using (var httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("https://localhost:44353/api/locadora/Usuarios/" + id))
+                using (var response = await httpClient.GetAsync("https://localhost:44378/api/locadora/Usuarios/" + id))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     _usuario = JsonConvert.DeserializeObject<Usuario>(apiResponse);
@@ -93,7 +94,7 @@ namespace Locadora.App.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Usuario usuario)
+        public async Task<IActionResult> EditForm(Usuario usuario)
         {
             Usuario _usuario = new Usuario();
 
@@ -105,7 +106,7 @@ namespace Locadora.App.Controllers
             {
                 StringContent content = new StringContent(JsonConvert.SerializeObject(usuario), Encoding.UTF8, "application/json");
 
-                using (var response = await httpClient.PutAsync("https://localhost:44353/api/locadora/Usuarios/" + usuario.Id, content))
+                using (var response = await httpClient.PutAsync("https://localhost:44378/api/locadora/Usuarios/" + usuario.Id, content))
                 {
 
                     if (!response.IsSuccessStatusCode) return View(usuario);
@@ -117,7 +118,7 @@ namespace Locadora.App.Controllers
         }
 
         // GET: Usuarios/Delete/5
-
+        //[HttpGet("{id:guid}")]
         public async Task<IActionResult> Delete(Guid id)
         {
 
@@ -125,7 +126,7 @@ namespace Locadora.App.Controllers
 
             using (var httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("https://localhost:44353/api/locadora/Usuarios/" + id))
+                using (var response = await httpClient.GetAsync("https://localhost:44378/api/locadora/Usuarios/" + id))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     _usuario = JsonConvert.DeserializeObject<Usuario>(apiResponse);
@@ -147,7 +148,7 @@ namespace Locadora.App.Controllers
             using (var httpClient = new HttpClient())
             {
                 // StringContent content = new StringContent(JsonConvert.SerializeObject(id), Encoding.UTF8, "application/json");
-                using (var response = await httpClient.DeleteAsync("https://localhost:44353/api/locadora/Usuarios/" + usuario.Id))
+                using (var response = await httpClient.DeleteAsync("https://localhost:44378/api/locadora/Usuarios/" + usuario.Id))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                 }

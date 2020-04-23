@@ -1,0 +1,73 @@
+Instalar e configurar  IIS Local
+
+Já vem no windows,  vc precisa habilita-lo,  e  configurar  para  rodar  as  aplicaçoes
+- Painel de Controle -  Programas -  Ativar  ou  desativar  recursos  windows -  Serviços  de  informações  da  Internet
+- Asp
+- Asp.net mvc
+- Asp.net core  -  baixar  -  https://dotnet.microsoft.com/
+
+Gerenciador de  serviços  de  informações  da  internet
+
+pasta  de  publicação de  sites no IIS
+C:\inetpub\wwwroot
+
+acessar  site  ou  API  em localhost
+-http://localhost/
+
+
+-----------------------------------------------------------------------------------------
+Criar  um  novo  site  no  IIS
+- No  C:\inetpub,  crie uma  pasta  com nome do  seu  projeto
+- No Visual  studio  gere  a  publicação  do  seu  site
+- Pegue  essa  publicação com  todas as pastas  e cole  na pasta  criada  em C:\inetpub, 
+
+- Entre em IIS  no Software  e:
+- Definir nome
+- Pool
+- Porta  de  acesso  ex:  80 ...
+- Host Name
+- Agora acesse o  site  no localhost criado
+
+-------------------------------------------------------------------------------------------
+Log de Erros
+- 100  Informação
+- 200  ok
+- 300  Redirecionamento
+- 400  Client Error
+- 404  Not  found
+- 500  Server  Error
+
+ Configurar  Failed Request Tracing  Regras  de  errors
+
+ --------------------------------------------------------------------------------------------
+ Baixar  e  configurar  HTTP Strict Transport Security
+
+
+
+---------------------------------------------------------------------------------------------
+
+Primeiramente deixe a opção Selecionada
+
+Name: É o nome do Serviço. A porta de HTTP já vem pré-definida no equipamento basta selecionar a opção HTTP
+aonde se encontra em vermelho acima e clicar em <<.
+Public Port: Ao Selecionar HTTP esse campo vai preencher automaticamente.
+IP Address: Endereço de IP do Servidor de HTTP. (ex:)
+Traffic Type: É o Tipo de trafego nesse exemplo: TCP.
+
+-----------------------------------------------------------------------------------------------
+Deploy da  Aplicação  no  Visual Studio
+-  Clique  com botão direito no  seu projeto
+-  opção  publicar
+-  escolha  o  modo  de  publicação  IIS
+-  clique  em publish
+-  Publish method: Web  Deploy
+-  Server: localhost
+-  Site  Name:Locadora.APP
+-  Detection URI:localhost
+
+Custom  Profile
+-  Configuration: Release
+-  Target Framework: dotnetcore 3.1
+-  Deployment  Mode: framework-opensorce
+-  Target  Runtime:  Portable
+
