@@ -1,13 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Locadora.Domain.Interfaces;
+using Locadora.Infra.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Locadora.App.Controllers
 {
     public class LoginController : Controller
     {
+        private readonly IUsuarioRepository _usuarioRepository;
+
+        public LoginController(IUsuarioRepository usuarioRepository)
+        {
+            _usuarioRepository = usuarioRepository;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -18,6 +23,15 @@ namespace Locadora.App.Controllers
             return View();
         }
 
-        
+        public IActionResult Logar(string email, string password)
+        {
+            var result = _usuarioRepository.Autenticar(email, password);
+
+            //if (result == null) return null;
+
+            TempData["Logado"] = email;
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }

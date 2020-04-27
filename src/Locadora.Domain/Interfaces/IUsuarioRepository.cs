@@ -9,10 +9,8 @@ namespace Locadora.Domain.Interfaces
     public interface IUsuarioRepository : IRepository<Usuario>
     {
 
-        Task<Usuario> ObterFilmePorDataDeLancamento(DateTime data);
-        Task<Usuario> ObterFilmePorGenero(string genero);
 
-    
+        Usuario Autenticar(string email, string password);
 
 
     }

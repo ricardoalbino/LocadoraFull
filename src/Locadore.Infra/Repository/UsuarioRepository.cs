@@ -1,11 +1,11 @@
 ﻿using Locadora.Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Locadora.Domain.Models;
 using Locadora.Infra.Context;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-
+using System.Linq;
+using System.Collections.Generic;
 namespace Locadora.Infra.Repository
 {
     public class UsuarioRepository : Repository<Usuario>, IUsuarioRepository
@@ -16,14 +16,12 @@ namespace Locadora.Infra.Repository
 
         }
 
-        public Task<Usuario> ObterFilmePorDataDeLancamento(DateTime data)
+        public Usuario Autenticar(string email, string password)
         {
-            throw new NotImplementedException();
-        }
+            Usuario usuario = _dataContext.Usuarios.AsNoTracking()
+           .Where(u => u.email == email && u.Password == password).FirstOrDefault();
 
-        public Task<Usuario> ObterFilmePorGenero(string genero)
-        {
-            throw new NotImplementedException();
+            return usuario;
         }
     }
 }

@@ -17,3 +17,12 @@ agora  a migration  esta pronta para  ser aplicada - existe  um snapchat  ate  a
   -  Gerar um Script  Migration
   ->Install-Package  Microsoft.EntityFrameworkCore.SqlServer
   -> Script-Migration -Context DataContext -Context DataContext
+
+
+  -  ALTERAR  OU ADICIONAR NOVOS CAMPOS NAS  TABELAS
+    -> 1º ADD  a coluna  na model  desejada
+    -> 2º  faça a  mapeação  da  coluna  na  classe  Map
+    ->  add-migration NOMEDAMIGRATION -Verbose -Context DataContext
+    EM SEGUIDA
+    - update-Database -Verbose -Context DataContext
+    PARA  ATUALIZAR  A  TABELA

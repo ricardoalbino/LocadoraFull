@@ -19,3 +19,42 @@ Possui referências da camada Domain
 
 Repository  -> DML,DQL   - SELECT
 Service     -> DDL - INSERT - UPDATE - DLETE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--
+1 -  IUsuarioRepository
+2 -  UsuarioRepository

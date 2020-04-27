@@ -51,18 +51,17 @@ namespace Locadore.Infra.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100);
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("Telefone")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasMaxLength(12);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("email")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasMaxLength(100);
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 

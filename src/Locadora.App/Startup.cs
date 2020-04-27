@@ -1,4 +1,6 @@
 using Locadora.Domain.Interfaces;
+using Locadora.Domain.Notificacoes;
+using Locadora.Domain.Services;
 using Locadora.Infra.Context;
 using Locadora.Infra.Repository;
 using Microsoft.AspNetCore.Builder;
@@ -30,6 +32,14 @@ namespace Locadora.App
 
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IFilmeRepository, FilmeRepository>();
+
+            //Servicos
+            services.AddScoped<IUsuarioService, UsuarioService>();
+            services.AddScoped<IFilmeService, FilmeService>();
+
+            //Notificadores
+            services.AddScoped<INotificador, Notificador>();
+
 
         }
 

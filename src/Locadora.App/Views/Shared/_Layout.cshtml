@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] Locadora </title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 
@@ -14,38 +15,69 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Locadora</a>
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuarios</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Filmes" asp-action="Index">Filmes</a>
-                        </li>
+                   
 
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="FilmeFiltros" asp-action="Index">Filtros/Relatorios</a>
-                        </li>
+                        <div class="pull-right">
+                            <ul class="nav pull-right">
+                                <li class="dropdown">
 
-                    </ul>
+                                    <a class="dropdown-toggle" data-toggle="dropdown"><p style="font-size: 8px">@TempData["Logado"]</p><b class="caret"></b></a>
+
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Registrar">Registrar</a>
+                                        </li>
+
+                                        <li class="divider"></li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Index">Logout</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
 
 
-                </div>
+
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuarios</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Filmes" asp-action="Index">Filmes</a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="FilmeFiltros" asp-action="Index">Relatorios</a>
+                            </li>
+
+                        </ul>
+
+
+</div>
             </div>
         </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+         
+
             @RenderBody()
         </main>
     </div>

@@ -290,6 +290,9 @@ C:\Users\Ricardo\Desktop\ra\branchs\src\Locadora.App\bin\Debug\netcoreapp3.1\ru\
 C:\Users\Ricardo\Desktop\ra\branchs\src\Locadora.App\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Ricardo\Desktop\ra\branchs\src\Locadora.App\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Ricardo\Desktop\ra\branchs\src\Locadora.App\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Ricardo\Desktop\ra\branchs\src\Locadora.App\obj\Debug\netcoreapp3.1\Locadora.App.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ricardo\Desktop\ra\branchs\src\Locadora.App\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
 C:\Users\Ricardo\Desktop\ra\branchs\src\Locadora.App\obj\Debug\netcoreapp3.1\Razor\Views\Login\Registrar.cshtml.g.cs
+C:\Users\Ricardo\Desktop\ra\branchs\src\Locadora.App\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Ricardo\Desktop\ra\branchs\src\Locadora.App\obj\Debug\netcoreapp3.1\Locadora.App.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ricardo\Desktop\ra\branchs\src\Locadora.App\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Logout.cshtml.g.cs
+C:\Users\Ricardo\Desktop\ra\branchs\src\Locadora.App\bin\Debug\netcoreapp3.1\libman.json

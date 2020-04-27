@@ -1,0 +1,23 @@
+﻿GitFlow
+
+O GitFlow é um modelo de organização de branches orientado à entregas de projetos criado para o GIT
+
+
+Nomenclatura dos Branches
+
+master: branch que contém o código mais estável
+
+develop: branch que contém o código que entrará no próximo deploy
+
+feature/[branch]: branches criados à partir do develop que contém as novas features. 
+Eles serão integrados ao branch develop
+
+hotfix/[branch_numero]: branches criados à partir do master que contém as correções dos bugs. 
+Eles serão integrados ao branch master e ao branch develop
+
+release/[branch_numero]: branches mais confiáveis que o develop que estão sendo preparados para 
+integração ao master.
+
+
+Comandos
+-https://atitudereflexiva.wordpress.com/2019/08/07/gitflow/
